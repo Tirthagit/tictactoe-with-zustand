@@ -1,5 +1,10 @@
 # Simple TicTacToe Game
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![React](https://img.shields.io/badge/Built%20with-React-blue)
+![Zustand](https://img.shields.io/badge/State-Zustand-ff69b4)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+
 A classic TicTacToe game built using **React** and **Zustand** for state management. This project helped me understand and apply the core concepts of Zustand through hands-on learning with its official documentation.
 
 ## ✨ Features
