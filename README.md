@@ -1,12 +1,37 @@
-# React + Vite
+# Simple TicTacToe Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![React](https://img.shields.io/badge/Built%20with-React-blue)
+![Zustand](https://img.shields.io/badge/State-Zustand-ff69b4)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 
-Currently, two official plugins are available:
+A classic TicTacToe game built using **React** and **Zustand** for state management. This project helped me understand and apply the core concepts of Zustand through hands-on learning with its official documentation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ✅ Classic 3x3 TicTacToe logic
+- 📜 Move history tracking
+- 🔄 "Play Again" option on game end
+- 🧠 Global state via Zustand
+- 🧪 Clean, minimal UI (to be improved)
+ 
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Planned Features
+
+- 🎨 UI improvements with better styling and layout
+- 🖼️ Theming and animations
+- 🏆 Winning cell highlight
+- 📱 Mobile-friendly design
+- 👥 Player name input (for local multiplayer)
+- 🔊 Arcade style music and sound effect with music play/pause and sound on/off button
+
+## 📦 Getting Started
+
+```bash
+git clone https://github.com/Tirthagit/tictactoe-with-zustand.git
+cd zustand-tictactoe
+npm install
+npm start
+
+Then open http://localhost:5173 in your browser.
