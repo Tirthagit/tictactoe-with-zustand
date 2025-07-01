@@ -11,30 +11,42 @@ import { combine } from "zustand/middleware";
  */
 const useGameStore = create(
   combine(
-    { squares: Array(9).fill(null), xIsNext: true }, // Initial state
+    // { squares: Array(9).fill(null), xIsNext: true },
+    // { history: [Array(9).fill(null)], currentMove: 0, xIsNext: true },
+    { history: [Array(9).fill(null)], currentMove: 0 }, // Initial state
 
     (set) => {
       // Actions (and optionally, more state)
       return {
-        setSquares: (nextSquaures) => {
+        setHistory: (nextHistory) => {
           set((state) => ({
-            squares:
-              typeof nextSquaures === "function"
-                ? nextSquaures(state.squares)
-                : nextSquaures,
+            history:
+              typeof nextHistory === "function"
+                ? nextHistory(state.history)
+                : nextHistory,
           }));
         },
-        setIsNext: (nextXIsNext) => {
+        setCurrentMove: (nextCurrentMove) => {
           set((state) => ({
-            xIsNext:
-              typeof nextXIsNext === "function"
-                ? nextXIsNext(state.xIsNext)
-                : nextXIsNext,
+            currentMove:
+              typeof nextCurrentMove === "function"
+                ? nextCurrentMove(state.currentMove)
+                : nextCurrentMove,
           }));
         },
+        // setXIsNext: (nextXIsNext) => {
+        //   set((state) => ({
+        //     xIsNext:
+        //       typeof nextXIsNext === "function"
+        //         ? nextXIsNext(state.xIsNext)
+        //         : nextXIsNext,
+        //   }));
+        // },
         setResetGame: () => {
           set(() => ({
-            squares: Array(9).fill(null),
+            history: [Array(9).fill(null)],
+            currentMove: 0,
+            xIsNext: true,
           }));
         },
       };

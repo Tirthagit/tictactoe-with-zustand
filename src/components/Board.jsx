@@ -6,11 +6,11 @@ import { calulateTurns } from "../helpers/calulateTurns";
 import calculateStatus from "../helpers/calculateStatus";
 import Button from "./Button";
 
-const Board = () => {
-  const squares = useGameStore((state) => state.squares);
-  const setSquares = useGameStore((state) => state.setSquares);
-  const xIsNext = useGameStore((state) => state.xIsNext);
-  const setXIsNext = useGameStore((state) => state.setIsNext);
+const Board = ({xIsNext, squares, onPlay}) => {
+  // const squares = useGameStore((state) => state.squares);
+  // const setSquares = useGameStore((state) => state.setSquares);
+  // const xIsNext = useGameStore((state) => state.xIsNext);
+  // const setXIsNext = useGameStore((state) => state.setXIsNext);
   const winner = calculateWinner(squares);
   const turns = calulateTurns(squares);
   const player = xIsNext ? "X" : "O";
@@ -21,8 +21,9 @@ const Board = () => {
     if (squares[i] || winner) return;
     const nextSquares = squares.slice();
     nextSquares[i] = player;
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    // setSquares(nextSquares);
+    // setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   };
 
   const isGameOver = winner || !turns;
